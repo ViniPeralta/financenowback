@@ -173,6 +173,12 @@
 									"value": "CREDIT",
 									"description": "Optional",
 									"disabled": true
+								},
+								{
+									"key": "essential",
+									"value": "true",
+									"description": "Optional",
+									"disabled": true
 								}
 							]
 						}

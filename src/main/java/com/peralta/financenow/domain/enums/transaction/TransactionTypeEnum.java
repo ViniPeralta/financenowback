@@ -7,7 +7,7 @@ public enum TransactionTypeEnum {
 
     CREDIT("CREDIT"),
 
-    DEBIT("VALUE");
+    DEBIT("DEBIT");
 
     private final String value;
 
