@@ -43,7 +43,7 @@ public class TransactionRepositoryCustom implements ITransactionRepositoryCustom
         }
 
         if (Objects.nonNull(request.getEssential())) {
-            query.append(" AND essential = '").append(request.getEssential()).append("'");
+            query.append(" AND essential = ").append(request.getEssential());
         }
 
     }
