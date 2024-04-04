@@ -20,3 +20,16 @@ create table tb_extract (
     transfer_date datetime,
     foreign key (user_id) references tb_users(id)
 );
+
+create table tb_companies (
+	id int auto_increment primary key,
+    user_id int,
+    name varchar(50),
+    sale_percentage double,
+    work_percentage double,
+    active boolean,
+    foreign key (user_id) references tb_users(id)
+);
+
+ALTER TABLE tb_extract ADD company_id INT NULL;
+
