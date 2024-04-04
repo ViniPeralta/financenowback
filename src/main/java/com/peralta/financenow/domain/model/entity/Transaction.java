@@ -1,9 +1,9 @@
 package com.peralta.financenow.domain.model.entity;
 
 import com.peralta.financenow.domain.enums.transaction.TransactionTypeEnum;
+import jakarta.persistence.*;
 import lombok.*;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -12,14 +12,13 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Builder
+@NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "tb_extract")
-@NoArgsConstructor
 public class Transaction implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
 
     @NonNull

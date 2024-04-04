@@ -2,11 +2,11 @@ package com.peralta.financenow.persistence.transaction;
 
 import com.peralta.financenow.domain.model.entity.Transaction;
 import com.peralta.financenow.domain.model.request.transaction.TransactionExtractRequest;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.Query;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 import java.util.List;
 import java.util.Objects;
 
