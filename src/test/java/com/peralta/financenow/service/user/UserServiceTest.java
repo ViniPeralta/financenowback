@@ -107,7 +107,7 @@ class UserServiceTest {
 
         User response = userService.validateLogin("", "").getData();
 
-        assertEquals("AAA", response.getUserName());
+        assertEquals(expected.getUserName(), response.getUserName());
         assertEquals(expected.getPassword(), response.getPassword());
         assertEquals(expected.getEmail(), response.getEmail());
 
