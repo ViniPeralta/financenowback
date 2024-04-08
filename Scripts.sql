@@ -21,15 +21,24 @@ create table tb_extract (
     foreign key (user_id) references tb_users(id)
 );
 
-create table tb_companies (
+create table tb_country (
 	id int auto_increment primary key,
-    user_id int,
-    name varchar(50),
-    sale_percentage double,
-    work_percentage double,
-    active boolean,
-    foreign key (user_id) references tb_users(id)
+	name varchar(100),
+	abbreviation varchar(10)
 );
 
-ALTER TABLE tb_extract ADD company_id INT NULL;
+create table tb_state (
+	id int auto_increment primary key,
+	name varchar(100),
+	abbreviation varchar(10),
+	country_id int,
+	foreign key (country_id) references tb_country(id)
+);
 
+create table tb_city (
+	id int auto_increment primary key,
+	name varchar(100),
+	abbreviation varchar(10),
+	state_id int,
+	foreign key (state_id) references tb_state(id)
+);
