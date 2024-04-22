@@ -1,18 +1,14 @@
 package com.peralta.financenow.domain.model.entity;
 
 import com.peralta.financenow.domain.enums.company.CompanyStatusEnum;
-import com.peralta.financenow.domain.enums.transaction.TransactionTypeEnum;
 import com.peralta.financenow.domain.model.entity.address.Address;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.time.LocalDate;
-
 @Entity
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "tb_company")
@@ -37,7 +33,7 @@ public class Company {
     private User user;
 
     @NonNull
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id", referencedColumnName = "id")
     private Address address;
 

@@ -17,6 +17,7 @@ public class DataResponse<T> {
 
     public DataResponse(T data) {
         this.data = data;
+        this.message = "Successful operation";
     }
 
 }

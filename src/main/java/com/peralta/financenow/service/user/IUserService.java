@@ -13,4 +13,6 @@ public interface IUserService {
 
     DataResponse<User> validateLogin(String username, String password) throws FinanceNowException;
 
+    User findById(Long userId) throws FinanceNowException;
+
 }

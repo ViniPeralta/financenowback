@@ -17,7 +17,11 @@ public enum FinanceNowExceptionEnum {
 
     USERNAME_ALREADY_EXISTS(500, "Usuário já cadastrado."),
 
-    EMAIL_ALREADY_EXISTS(500, "E-mail já cadastrado.");
+    EMAIL_ALREADY_EXISTS(500, "E-mail já cadastrado."),
+
+    CITY_NOT_FOUND(404, "Cidade não encontrada."),
+
+    COMPANY_ALREADY_EXISTS(500, "Empresa já cadastrada.");
 
     private final Integer errorCode;
 
