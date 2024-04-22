@@ -1,5 +1,6 @@
 package com.peralta.financenow.service.user;
 
+import com.peralta.financenow.domain.enums.exception.FinanceNowExceptionEnum;
 import com.peralta.financenow.domain.model.request.user.UserDTO;
 import com.peralta.financenow.domain.validator.user.UserValidator;
 import com.peralta.financenow.exception.FinanceNowException;
@@ -10,7 +11,7 @@ import com.peralta.financenow.domain.model.response.DataResponse;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserService implements IUserService{
+public class UserService implements IUserService {
 
     private final UserRepository userRepository;
 
@@ -37,5 +38,15 @@ public class UserService implements IUserService{
 
         return new DataResponse<>(user);
 
+    }
+
+    @Override
+    public User findById(Long userId) throws FinanceNowException {
+        return userRepository.findById(userId).orElseThrow(() ->
+                new FinanceNowException(
+                        FinanceNowExceptionEnum.USER_NOT_FOUND.getErrorCode(),
+                        FinanceNowExceptionEnum.USER_NOT_FOUND.getDescription(),
+                        "UserService.findById"
+                ));
     }
 }
