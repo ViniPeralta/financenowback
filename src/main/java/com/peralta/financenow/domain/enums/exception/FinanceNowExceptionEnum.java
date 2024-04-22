@@ -21,7 +21,9 @@ public enum FinanceNowExceptionEnum {
 
     CITY_NOT_FOUND(404, "Cidade não encontrada."),
 
-    COMPANY_ALREADY_EXISTS(500, "Empresa já cadastrada.");
+    COMPANY_ALREADY_EXISTS(500, "Empresa já cadastrada."),
+
+    FILTER_NOT_FOUND(500, "Filtro não encontrado.");
 
     private final Integer errorCode;
 

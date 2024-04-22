@@ -3,7 +3,7 @@ package com.peralta.financenow.exception;
 import lombok.Getter;
 
 @Getter
-public class FinanceNowException extends Exception {
+public class FinanceNowException extends RuntimeException {
 
     private final Integer errorCode;
 
