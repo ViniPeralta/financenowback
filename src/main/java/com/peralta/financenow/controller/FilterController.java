@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "filter")
 @CrossOrigin(origins = "*")
-public class FilterController <R> {
+public class FilterController<R> {
 
     private final FilterFacade<R> filterFacade;
 
@@ -21,12 +21,17 @@ public class FilterController <R> {
 
     @GetMapping
     public DataListResponse<FilterResponseMap<R>> getFiltersResponse(
-            @RequestParam(name = "pageSize") Long pageSize,
+            @RequestParam(name = "pageSize", defaultValue = "10", required = false) Long pageSize,
             @RequestParam(name = "filterKeys") List<Long> filterKeys,
-            @RequestParam(name = "strSearch") String strSearch,
-            @RequestParam(name = "relatedIds") List<Long> relatedIds
+            @RequestParam(name = "strSearch", defaultValue = "", required = false) String strSearch,
+            @RequestParam(name = "relatedIds", required = false) List<Long> relatedIds
     ) {
-        return filterFacade.getFilters(FilterRequest.builder().build());
+        return filterFacade.getFilters(FilterRequest.builder()
+                .pageSize(pageSize)
+                .filterKeys(filterKeys)
+                .strSearch(strSearch)
+                .relatedIds(relatedIds)
+                .build());
     }
 
 }
