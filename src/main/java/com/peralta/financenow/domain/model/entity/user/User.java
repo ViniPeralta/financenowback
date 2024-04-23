@@ -1,4 +1,4 @@
-package com.peralta.financenow.domain.model.entity;
+package com.peralta.financenow.domain.model.entity.user;
 
 import jakarta.persistence.*;
 import lombok.*;

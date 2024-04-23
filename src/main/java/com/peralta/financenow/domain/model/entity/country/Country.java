@@ -1,4 +1,4 @@
-package com.peralta.financenow.domain.model.entity.address;
+package com.peralta.financenow.domain.model.entity.country;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

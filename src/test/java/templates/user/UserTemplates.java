@@ -1,6 +1,6 @@
 package templates.user;
 
-import com.peralta.financenow.domain.model.entity.User;
+import com.peralta.financenow.domain.model.entity.user.User;
 import com.peralta.financenow.domain.model.request.user.UserDTO;
 
 public class UserTemplates {

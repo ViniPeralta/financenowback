@@ -1,6 +1,6 @@
 package templates.country;
 
-import com.peralta.financenow.domain.model.entity.address.Country;
+import com.peralta.financenow.domain.model.entity.country.Country;
 
 public class CountryTemplates {
 

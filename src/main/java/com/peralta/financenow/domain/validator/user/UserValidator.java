@@ -1,7 +1,7 @@
 package com.peralta.financenow.domain.validator.user;
 
 import com.peralta.financenow.domain.enums.exception.FinanceNowExceptionEnum;
-import com.peralta.financenow.domain.model.entity.User;
+import com.peralta.financenow.domain.model.entity.user.User;
 import com.peralta.financenow.exception.FinanceNowException;
 
 import java.util.Objects;

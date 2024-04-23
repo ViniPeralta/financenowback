@@ -4,7 +4,7 @@ import com.peralta.financenow.domain.model.request.transaction.TransactionByDate
 import com.peralta.financenow.domain.model.request.transaction.TransactionDTO;
 import com.peralta.financenow.domain.model.request.transaction.TransactionExtractRequest;
 import com.peralta.financenow.exception.FinanceNowException;
-import com.peralta.financenow.domain.model.entity.Transaction;
+import com.peralta.financenow.domain.model.entity.transaction.Transaction;
 import com.peralta.financenow.domain.model.request.transaction.TransactionRequest;
 import com.peralta.financenow.domain.model.response.DataListResponse;
 import com.peralta.financenow.domain.model.response.DataResponse;

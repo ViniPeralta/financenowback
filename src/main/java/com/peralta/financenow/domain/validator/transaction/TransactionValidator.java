@@ -1,7 +1,7 @@
 package com.peralta.financenow.domain.validator.transaction;
 
 import com.peralta.financenow.domain.enums.exception.FinanceNowExceptionEnum;
-import com.peralta.financenow.domain.model.entity.Transaction;
+import com.peralta.financenow.domain.model.entity.transaction.Transaction;
 import com.peralta.financenow.domain.model.request.transaction.TransactionByDateRequest;
 import com.peralta.financenow.domain.model.request.transaction.TransactionExtractRequest;
 import com.peralta.financenow.exception.FinanceNowException;

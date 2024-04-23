@@ -4,7 +4,7 @@ import com.peralta.financenow.domain.enums.exception.FinanceNowExceptionEnum;
 import com.peralta.financenow.domain.model.request.user.UserDTO;
 import com.peralta.financenow.domain.validator.user.UserValidator;
 import com.peralta.financenow.exception.FinanceNowException;
-import com.peralta.financenow.domain.model.entity.User;
+import com.peralta.financenow.domain.model.entity.user.User;
 import com.peralta.financenow.mapper.user.UserMapper;
 import com.peralta.financenow.persistence.user.UserRepository;
 import com.peralta.financenow.domain.model.response.DataResponse;

@@ -1,6 +1,6 @@
 package templates.city;
 
-import com.peralta.financenow.domain.model.entity.address.City;
+import com.peralta.financenow.domain.model.entity.city.City;
 import templates.state.StateTemplates;
 
 public class CityTemplates {

@@ -1,6 +1,6 @@
 package com.peralta.financenow.persistence.city;
 
-import com.peralta.financenow.domain.model.entity.address.City;
+import com.peralta.financenow.domain.model.entity.city.City;
 import com.peralta.financenow.domain.model.response.filter.FilterResponse;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

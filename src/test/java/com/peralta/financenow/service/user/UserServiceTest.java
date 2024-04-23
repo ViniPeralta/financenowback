@@ -1,7 +1,7 @@
 package com.peralta.financenow.service.user;
 
 import com.peralta.financenow.domain.enums.exception.FinanceNowExceptionEnum;
-import com.peralta.financenow.domain.model.entity.User;
+import com.peralta.financenow.domain.model.entity.user.User;
 import com.peralta.financenow.exception.FinanceNowException;
 import com.peralta.financenow.persistence.user.UserRepository;
 import org.junit.jupiter.api.DisplayName;
@@ -10,7 +10,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.mockito.junit.jupiter.MockitoSettings;
 import templates.user.UserTemplates;
 
 import java.util.Optional;

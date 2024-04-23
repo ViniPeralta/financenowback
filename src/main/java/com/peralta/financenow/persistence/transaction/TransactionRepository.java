@@ -1,6 +1,6 @@
 package com.peralta.financenow.persistence.transaction;
 
-import com.peralta.financenow.domain.model.entity.Transaction;
+import com.peralta.financenow.domain.model.entity.transaction.Transaction;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

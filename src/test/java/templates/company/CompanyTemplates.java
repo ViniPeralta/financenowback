@@ -1,7 +1,7 @@
 package templates.company;
 
 import com.peralta.financenow.domain.enums.company.CompanyStatusEnum;
-import com.peralta.financenow.domain.model.entity.Company;
+import com.peralta.financenow.domain.model.entity.company.Company;
 import com.peralta.financenow.domain.model.request.company.CompanyCreateRequest;
 import templates.address.AddressTemplates;
 import templates.user.UserTemplates;
