@@ -1,9 +1,11 @@
 package com.peralta.financenow.domain.model.request.company;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;
 
 @Data
+@Builder
 public class CompanyCreateRequest {
 
     @NonNull
