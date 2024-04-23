@@ -2,6 +2,7 @@ package com.peralta.financenow.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.peralta.financenow.service.transaction.ITransactionService;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -28,6 +29,7 @@ class TransactionControllerTest {
     private static final String URL = "/transaction/";
 
     @Test
+    @DisplayName("Should return transactions extract")
     void getTransactionsExtract() throws Exception {
 
         mockMvc.perform(MockMvcRequestBuilders.get(URL + "extract")
@@ -40,6 +42,7 @@ class TransactionControllerTest {
     }
 
     @Test
+    @DisplayName("Should return transaction by date")
     void getTransactionsByDate() throws Exception {
 
         mockMvc.perform(MockMvcRequestBuilders.get(URL + "list")
@@ -52,6 +55,7 @@ class TransactionControllerTest {
     }
 
     @Test
+    @DisplayName("Should delete by id")
     void deleteByIdList() throws Exception {
 
         mockMvc.perform(MockMvcRequestBuilders.delete(URL + "delete")
@@ -62,6 +66,7 @@ class TransactionControllerTest {
     }
 
     @Test
+    @DisplayName("Should register a transaction")
     void registerNewTransaction() throws Exception {
 
         String json = objectMapper.writeValueAsString(TransactionTemplates.getTransactionRequest());
@@ -74,6 +79,7 @@ class TransactionControllerTest {
     }
 
     @Test
+    @DisplayName("Should update a transaction")
     void updateTransaction() throws Exception {
 
         String json = objectMapper.writeValueAsString(TransactionTemplates.getTransactionDTO());

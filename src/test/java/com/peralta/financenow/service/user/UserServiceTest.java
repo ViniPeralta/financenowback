@@ -13,6 +13,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
 import templates.user.UserTemplates;
 
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
@@ -98,7 +100,7 @@ class UserServiceTest {
     }
 
     @Test
-    @DisplayName("Should return a User")
+    @DisplayName("Should return a User login data")
     void validateLogin() throws FinanceNowException {
 
         User expected = UserTemplates.getUser();
@@ -110,6 +112,25 @@ class UserServiceTest {
         assertEquals(expected.getUserName(), response.getUserName());
         assertEquals(expected.getPassword(), response.getPassword());
         assertEquals(expected.getEmail(), response.getEmail());
+
+    }
+
+    @Test
+    @DisplayName("Should return user by id")
+    void findById() {
+        User expected = UserTemplates.getUser();
+        when(userRepository.findById(any())).thenReturn(Optional.of(expected));
+
+        User response = userService.findById(1L);
+
+        assertEquals(expected, response);
+    }
+
+    @Test
+    @DisplayName("Should throw USER_NOT_FOUND exception")
+    void findByIdError() {
+
+        assertThrows(FinanceNowException.class, () -> userService.findById(1L));
 
     }
 }
