@@ -1,5 +1,6 @@
-package com.peralta.financenow.domain.model.entity.address;
+package com.peralta.financenow.domain.model.entity.city;
 
+import com.peralta.financenow.domain.model.entity.state.State;
 import jakarta.persistence.*;
 import lombok.*;
 

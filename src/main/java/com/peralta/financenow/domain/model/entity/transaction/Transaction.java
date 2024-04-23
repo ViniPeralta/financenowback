@@ -1,6 +1,7 @@
-package com.peralta.financenow.domain.model.entity;
+package com.peralta.financenow.domain.model.entity.transaction;
 
 import com.peralta.financenow.domain.enums.transaction.TransactionTypeEnum;
+import com.peralta.financenow.domain.model.entity.user.User;
 import jakarta.persistence.*;
 import lombok.*;
 

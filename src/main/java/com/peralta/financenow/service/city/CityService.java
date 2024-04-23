@@ -1,7 +1,7 @@
 package com.peralta.financenow.service.city;
 
 import com.peralta.financenow.domain.enums.exception.FinanceNowExceptionEnum;
-import com.peralta.financenow.domain.model.entity.address.City;
+import com.peralta.financenow.domain.model.entity.city.City;
 import com.peralta.financenow.exception.FinanceNowException;
 import com.peralta.financenow.persistence.city.CityRepository;
 import org.springframework.stereotype.Service;

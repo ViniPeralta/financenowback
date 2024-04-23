@@ -1,8 +1,8 @@
 package com.peralta.financenow.mapper.transaction;
 
 import com.peralta.financenow.domain.enums.transaction.TransactionTypeEnum;
-import com.peralta.financenow.domain.model.entity.Transaction;
-import com.peralta.financenow.domain.model.entity.User;
+import com.peralta.financenow.domain.model.entity.transaction.Transaction;
+import com.peralta.financenow.domain.model.entity.user.User;
 import com.peralta.financenow.domain.model.request.transaction.TransactionDTO;
 import com.peralta.financenow.domain.model.request.transaction.TransactionRequest;
 import com.peralta.financenow.utils.DateUtil;

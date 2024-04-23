@@ -1,6 +1,7 @@
-package com.peralta.financenow.domain.model.entity;
+package com.peralta.financenow.domain.model.entity.company;
 
 import com.peralta.financenow.domain.enums.company.CompanyStatusEnum;
+import com.peralta.financenow.domain.model.entity.user.User;
 import com.peralta.financenow.domain.model.entity.address.Address;
 import jakarta.persistence.*;
 import lombok.*;

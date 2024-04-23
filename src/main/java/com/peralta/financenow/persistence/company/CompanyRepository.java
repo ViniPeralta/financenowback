@@ -1,6 +1,6 @@
 package com.peralta.financenow.persistence.company;
 
-import com.peralta.financenow.domain.model.entity.Company;
+import com.peralta.financenow.domain.model.entity.company.Company;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

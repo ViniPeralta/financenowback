@@ -1,6 +1,6 @@
 package com.peralta.financenow.persistence.user;
 
-import com.peralta.financenow.domain.model.entity.User;
+import com.peralta.financenow.domain.model.entity.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

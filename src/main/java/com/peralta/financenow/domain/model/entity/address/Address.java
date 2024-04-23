@@ -1,5 +1,6 @@
 package com.peralta.financenow.domain.model.entity.address;
 
+import com.peralta.financenow.domain.model.entity.city.City;
 import jakarta.persistence.*;
 import lombok.*;
 

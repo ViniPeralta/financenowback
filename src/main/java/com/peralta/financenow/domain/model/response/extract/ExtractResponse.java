@@ -1,6 +1,6 @@
 package com.peralta.financenow.domain.model.response.extract;
 
-import com.peralta.financenow.domain.model.entity.Transaction;
+import com.peralta.financenow.domain.model.entity.transaction.Transaction;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

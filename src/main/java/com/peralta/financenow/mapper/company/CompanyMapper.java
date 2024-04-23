@@ -1,10 +1,10 @@
 package com.peralta.financenow.mapper.company;
 
 import com.peralta.financenow.domain.enums.company.CompanyStatusEnum;
-import com.peralta.financenow.domain.model.entity.Company;
-import com.peralta.financenow.domain.model.entity.User;
+import com.peralta.financenow.domain.model.entity.company.Company;
+import com.peralta.financenow.domain.model.entity.user.User;
 import com.peralta.financenow.domain.model.entity.address.Address;
-import com.peralta.financenow.domain.model.entity.address.City;
+import com.peralta.financenow.domain.model.entity.city.City;
 import com.peralta.financenow.domain.model.request.company.CompanyCreateRequest;
 
 public class CompanyMapper {
