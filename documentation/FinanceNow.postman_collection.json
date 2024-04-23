@@ -43,7 +43,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{localendpoint}}/user/login?username=admin&password=123456",
+							"raw": "{{localendpoint}}/user/login?username=admin&password=12345",
 							"host": [
 								"{{localendpoint}}"
 							],
@@ -59,7 +59,7 @@
 								},
 								{
 									"key": "password",
-									"value": "123456",
+									"value": "12345",
 									"description": "Required"
 								}
 							]
@@ -239,6 +239,89 @@
 									"key": "idList",
 									"value": "4",
 									"description": "Required"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"company\": \"PeraltaLandia\",\r\n    \"email\": \"peraltalandia@hotmail.com\",\r\n    \"phone\": \"910102020\",\r\n    \"city\": \"2\",\r\n    \"zipCode\": \"12345124\",\r\n    \"address\": \"Rua Peralta\",\r\n    \"number\": \"25\",\r\n    \"salePercentage\": \"10\",\r\n    \"workPercentage\": \"40\",\r\n    \"userId\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localendpoint}}/company/create",
+							"host": [
+								"{{localendpoint}}"
+							],
+							"path": [
+								"company",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Filter",
+			"item": [
+				{
+					"name": "/filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localendpoint}}/filter?pageSize=10&filterKeys=0&strSearch=sao",
+							"host": [
+								"{{localendpoint}}"
+							],
+							"path": [
+								"filter"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10",
+									"description": "Not Required"
+								},
+								{
+									"key": "filterKeys",
+									"value": "0",
+									"description": "Required"
+								},
+								{
+									"key": "strSearch",
+									"value": "sao",
+									"description": "Not Required"
+								},
+								{
+									"key": "relatedIds",
+									"value": null,
+									"description": "Not Required",
+									"disabled": true
 								}
 							]
 						}
