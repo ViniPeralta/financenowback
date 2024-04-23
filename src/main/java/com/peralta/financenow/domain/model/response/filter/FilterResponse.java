@@ -3,16 +3,12 @@ package com.peralta.financenow.domain.model.response.filter;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import java.util.List;
-
 @Data
 @AllArgsConstructor
-public class FilterResponseMap<R> {
+public class FilterResponse {
 
-    private Long filterId;
+    private Long id;
 
-    private String key;
-
-    private List<R> filterResponse;
+    private String value;
 
 }

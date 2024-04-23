@@ -6,10 +6,13 @@ import com.peralta.financenow.domain.model.request.filter.FilterRequest;
 import com.peralta.financenow.domain.model.response.DataListResponse;
 import com.peralta.financenow.domain.model.response.filter.FilterResponseMap;
 import com.peralta.financenow.exception.FinanceNowException;
+import org.springframework.stereotype.Component;
 
 import java.util.*;
 
-public class FilterFacade <R> {
+@Component
+
+public class FilterFacade<R> {
 
     private final Map<FilterEnum, IFilterService<R>> services = new EnumMap<>(FilterEnum.class);
 
@@ -21,7 +24,12 @@ public class FilterFacade <R> {
         List<FilterResponseMap<R>> response = new ArrayList<>();
         filterRequest.getFilterKeys().forEach(key ->
                 FilterEnum.getByKey(key).ifPresentOrElse(
-                        filterEnum -> response.add(getService(filterEnum).getFilterData(filterRequest)),
+                        filterEnum -> response.add(
+                                new FilterResponseMap<>(
+                                        filterEnum.getKey(),
+                                        filterEnum.getDescription(),
+                                        getService(filterEnum).getFilterData(filterRequest)
+                                )),
                         () -> {
                             throw new FinanceNowException(
                                     FinanceNowExceptionEnum.FILTER_NOT_FOUND.getErrorCode(),

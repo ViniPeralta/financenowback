@@ -13,11 +13,12 @@ import java.util.List;
 @AllArgsConstructor
 public class DataListResponse<T> {
 
-    private List<T> data;
-
     private String message;
 
+    private List<T> data;
+
     public DataListResponse(List<T> data) {
+        this.message = "Successfull Operation";
         this.data = data;
     }
 
